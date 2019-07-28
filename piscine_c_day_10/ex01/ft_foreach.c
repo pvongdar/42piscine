@@ -1,0 +1,43 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_foreach.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pvongdar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/07/23 22:50:14 by pvongdar          #+#    #+#             */
+/*   Updated: 2019/07/23 23:53:59 by pvongdar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+#include <stdio.h>
+#include <unistd.h>
+
+void ft_ten(int n)
+{
+
+  printf("%d\n ", n*10);
+
+}
+
+void	ft_foreach(int *tab, int length, void (*f)(int))
+{
+	int i;
+
+	i = 0;
+	while (i < length)
+	{
+		f(tab[i]);
+		i++;
+	}
+}
+
+int main()
+{
+
+  int tab[5] = {1,2,3,4,5};
+  ft_foreach(tab, 5, &ft_ten);
+  //  printf("%d\n", ft_foreach(tab, 5, &ft_ten));
+
+  return (0);
+
+}

@@ -1,0 +1,44 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   putnbr.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pvongdar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/07/15 15:27:27 by pvongdar          #+#    #+#             */
+/*   Updated: 2019/07/15 15:27:30 by pvongdar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+#include <unistd.h>
+void	ft_putchar(char c)
+{
+  write(1, &c, 1);
+}
+
+void	ft_putnbr(int nb)
+{
+
+	    if (nb < 0)
+	    {
+	      ft_putchar('-'); 
+	      ft_putnbr(-nb);	
+	    }
+	    else if (nb >= 10)
+	   {
+   
+	     ft_putnbr(nb / 10);
+	     ft_putnbr(nb % 10);
+	   }
+	     else
+	       {
+
+	     ft_putchar(nb + '0');
+	     
+	      }
+}
+	   
+int main()
+{
+  ft_putnbr(42);
+  return 0;
+}

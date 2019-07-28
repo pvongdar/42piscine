@@ -1,0 +1,1 @@
+ifconfig | grep "ether" -w | tr -d "ether,\t, "

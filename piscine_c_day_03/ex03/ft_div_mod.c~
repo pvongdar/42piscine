@@ -1,0 +1,42 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pvongdar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/07/12 13:57:03 by pvongdar          #+#    #+#             */
+/*   Updated: 2019/07/12 14:59:20 by pvongdar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stdio.h>
+
+void ft_div_mod(int a, int b, int *div, int *mod)
+{
+ 
+	       *div = a / b;
+	       *mod = a % b;
+  			printf("%d", *div);
+  			printf("%d", *mod);
+}
+
+
+int main()
+{
+  int a;
+  int b;
+  int *div;
+  int *rem;
+  div = &a;
+  rem = &b;
+ 
+  a = 45;
+  b = 5;
+  
+  ft_div_mod(a, b, div, rem);
+  printf("%d", *div);
+  printf("%d", *rem);
+  return 0;
+
+}

@@ -1,0 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pvongdar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/07/11 10:32:59 by pvongdar          #+#    #+#             */
+/*   Updated: 2019/07/11 11:40:25 by pvongdar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+void	ft_putchar (char c);
+
+void	ft_print_reverse_alphabet(void)
+{
+	char daletter;
+
+	daletter = 'z';
+	while (daletter >= 'a')
+	{
+		ft_putchar(daletter);
+		daletter--;
+		ft_putchar('\n');
+	}
+}
